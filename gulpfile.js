@@ -21,7 +21,6 @@ const env = process.env.NODE_ENV;
 const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require('./gulp.config');
 
 
-
 sass.compiler = require('node-sass');
 
 
@@ -42,25 +41,24 @@ task('copy:icons', () => {
 });
 
 const styles = [
-  'node_modules/normalize.css/normalize.css',
   'src/styles/main.scss'
 ];
 
 task('styles', () => {
   return src(styles)
-    .pipe(gulpif(env == 'dev', sourcemaps.init()))
-    .pipe(concat('main.min.scss'))
+    // .pipe(gulpif(env == 'dev', sourcemaps.init()))
+    .pipe(concat('main.css'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     //.pipe(px2rem())
     .pipe(gulpif(env == 'dev',
       autoprefixer({
-        browsers: ['last 2 versions'],
+        overrideBrowserslist: ['last 2 versions'],
         cascade: false
       })))
     .pipe(gulpif(env == 'prod', gcmq()))
     .pipe(gulpif(env == 'prod', cleanCSS({ compatibility: 'ie8' })))
-    .pipe(gulpif(env == 'dev', sourcemaps.write()))
+    // .pipe(gulpif(env == 'dev', sourcemaps.write()))
     .pipe(dest('dist'))
     .pipe(reload({ stream: true }))
 });

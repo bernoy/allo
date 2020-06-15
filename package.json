@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "gulp": "cross-env NODE_ENV=dev gulp",
+    "start": "cross-env NODE_ENV=dev gulp",
     "build": "cross-env NODE_ENV=prod gulp build"
   },
   "repository": {
@@ -40,7 +40,6 @@
     "node-sass": "^4.12.0"
   },
   "dependencies": {
-    "gulp-smile-px2rem": "^0.1.0",
-    "normalize.css": "^8.0.1"
+    "gulp-smile-px2rem": "^0.1.0"
   }
 }

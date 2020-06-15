@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.l-relative {
+  position: relative;
+}
+.l-container {
+  max-width: 1198px;
+  display: flex;
+  flex-direction: column;
+}
+.l-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 100px;
+  height: 600px;
+  position: relative;
+}
+.l-wrapper-div {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+.l-half {
+  height: 100%;
+  width: 50%;
+  &_absolute {
+    position: absolute;
+
+    &_right {
+      bottom: 0;
+      right: 0;
+      background: url(./icons/i_01.png) center center / cover no-repeat;
+    }
+  }
+
+  &_text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+}
+.l-img {
+  width: 100%;
+  text-align: center;
+}
+.l-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 400;
+}
+.l-paragraph {
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+
+  &_center {
+    text-align: center;
+  }
+}
