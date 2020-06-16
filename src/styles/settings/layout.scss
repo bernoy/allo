@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 .l-relative {
   position: relative;
@@ -12,9 +13,16 @@ body {
 .l-section {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 100px;
+  padding-left: 8.5%;
   height: 600px;
   position: relative;
+
+  @include tablets{
+    padding: 0 1%;
+  }
+  @include phones{
+    padding: 0 1%;
+  }
 }
 .l-wrapper-div {
   width: 100%;
@@ -24,15 +32,6 @@ body {
 .l-half {
   height: 100%;
   width: 50%;
-  &_absolute {
-    position: absolute;
-
-    &_right {
-      bottom: 0;
-      right: 0;
-      background: url(./icons/i_01.png) center center / cover no-repeat;
-    }
-  }
 
   &_text-block {
     display: flex;
@@ -41,22 +40,38 @@ body {
     color: white;
   }
 }
-.l-img {
-  width: 100%;
-  text-align: center;
-}
 .l-title {
   font-size: 28px;
+  margin: 0;
   margin-bottom: 30px;
   color: black;
   font-weight: 400;
+  z-index: 1;
+
+  @include tablets {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  @include phones {
+    text-align: center;
+  }
 }
 .l-paragraph {
+  z-index: 1;
   font-size: 16px;
   line-height: 22px;
   color: black;
+  margin: 0;
 
   &_center {
+    text-align: center;
+  }
+
+  @include tablets {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  @include phones {
     text-align: center;
   }
 }

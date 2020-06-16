@@ -2,17 +2,387 @@
   background-color: $pink;
   display: flex;
   flex-direction: column;
+
+  @include tablets {
+    min-height: 885px;
+  }
+  @include phones {
+    min-height: 750px;
+  }
 }
 .l-title-intro {
   padding-top: 50px;
-  margin: 0;
   font-size: 34px;
   color: white;
   strong {
     color: $red;
   }
+  @include tablets {
+    margin-bottom: 40px;
+  }
 }
+
+.l-title-white {
+  color: white;
+}
+
+.l-title-about-margin {
+  padding-top: 50px;
+}
+
+.l-paragraph-white {
+  color: white;
+}
+
 .l-half-intro {
   display: flex;
   align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 599px;
+}
+
+.l-img {
+  width: 100%;
+}
+
+.l-img-about-engine {
+  box-sizing: border-box;
+  padding: 0 6%;
+}
+
+.l-section-about-engine {
+  background-color: $black;
+  @include col-center;
+  height: 650px;
+}
+
+.l-paragraph-engine {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 34px;
+
+  @include phones {
+    width: 90%;
+  }
+}
+
+.engine-desc-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 65.44%;
+  margin-bottom: -78px;
+  z-index: 1;
+
+  @include tablets {
+    width: 80.44%;
+  }
+  @include phones {
+    width: 97%;
+    margin-bottom: -5px;
+  }
+}
+
+.engine-desc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 58px;
+  letter-spacing: -0.05em;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(93.95deg, #01a4f5 0%, #02eaef 100%);
+
+  @include tablets {
+    font-size: 22px;
+  }
+  @include phones {
+    font-size: 22px;
+  }
+}
+
+.desc-item__wrapper {
+  margin-bottom: 10px;
+}
+
+.desc-item_size {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.05em;
+
+  @include phones {
+    font-size: 11px;
+  }
+}
+
+.desc-item_color {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0;
+
+  @include phones {
+    font-size: 10px;
+  }
+}
+
+.l-section-about-toothbrush {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background-color: $coral;
+
+  @include tablets {
+    flex-direction: column;
+  }
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.l-img-toothbrush {
+  width: 100%;
+  max-height: 100%;
+  padding-left: 11.69%;
+
+  @include tablets {
+    max-width: 100%;
+    height: 100%;
+    padding-left: 0;
+    object-fit: contain;
+  }
+  @include phones {
+    max-width: 100%;
+    height: 100%;
+    padding-left: 0;
+  }
+}
+
+.l-title-toothbrush-margin {
+  padding-left: 49px;
+
+  @include tablets {
+    padding-left: 0;
+  }
+  @include phones {
+    padding-left: 0;
+  }
+}
+
+.l-paragraph-toothbrush-padding {
+  padding-left: 49px;
+  padding-right: 16%;
+
+  @include tablets {
+    padding: 0 3%;
+  }
+  @include phones {
+    padding: 0 3%;
+  }
+}
+
+.l-half-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.l-section-protect {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.l-title-protect {
+  margin-top: 20px;
+}
+
+.l-img-protect {
+  width: 100%;
+}
+
+.l-paragraph-protect {
+  text-align: center;
+  width: 83%;
+}
+
+.l-section-mobile-app {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  background: linear-gradient(180deg, #c7e8ef 0%, #b6e2eb 100%);
+  position: relative;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.l-img-mobile {
+  width: 82.5%;
+  z-index: 1;
+  position: relative;
+
+  @include tablets {
+    height: 100%;
+    width: auto;
+    transform: translate(0, 40px);
+  }
+}
+
+.l-paragraph-mobile {
+  width: 75%;
+  @include tablets {
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+  }
+}
+
+.mobile-low-bg {
+  background: #deecef;
+  width: 100%;
+  height: 143px;
+  position: absolute;
+  bottom: 0;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.l-section-water-protection {
+  width: 100%;
+  height: 550px;
+  background: #fff;
+  display: flex;
+  position: relative;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.l-half-water-padding {
+  box-sizing: border-box;
+  padding-left: 8.4%;
+}
+
+.l-paragraph-water-protection {
+  width: 85%;
+  @include tablets {
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+  }
+}
+
+.l-img-water {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 599px;
+
+  @include tablets {
+    position: static;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.l-section-battery-life {
+  display: flex;
+  height: 600px;
+  background: #e7e7e7;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.l-paragraph-battery {
+  width: 75%;
+  @include tablets {
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+  }
+}
+
+.l-img-battery {
+  width: 100%;
+  @include tablets{
+    width: auto;
+    max-height: 100%;
+    transform: translateY(40px);
+  }
+}
+
+.intro-adp {
+  @include tablets {
+    justify-content: flex-start;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.toothbrush-adp {
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  @include phones {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mobile-app-adp {
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.water-protection-adp {
+  @include tablets {
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    padding: 0;
+  }
+  @include phones {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.battery-life-adp {
+  @include tablets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+  }
 }
