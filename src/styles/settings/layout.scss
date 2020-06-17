@@ -11,17 +11,10 @@ body {
   flex-direction: column;
 }
 .l-section {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 8.5%;
-  height: 600px;
-  position: relative;
-
-  @include tablets{
-    padding: 0 1%;
-  }
-  @include phones{
-    padding: 0 1%;
+  padding-top: 20px;
+  @include tablets {
+    max-height: none;
+    height: auto;
   }
 }
 .l-wrapper-div {
@@ -38,6 +31,10 @@ body {
     flex-direction: column;
     justify-content: center;
     color: white;
+
+    @include tablets {
+      display: block;
+    }
   }
 }
 .l-title {
@@ -54,6 +51,7 @@ body {
   }
   @include phones {
     text-align: center;
+    font-size: 24px;
   }
 }
 .l-paragraph {
@@ -73,5 +71,6 @@ body {
   }
   @include phones {
     text-align: center;
+    font-size: 14px;
   }
 }

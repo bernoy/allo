@@ -1,7 +1,20 @@
+/// allo styles
+
+.tab .content.description-content{
+  padding: 0;
+}
+.tab .content{
+  padding: 0;
+}
+
+///
 .l-section-intro {
   background-color: $pink;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 600px;
+  position: relative;
 
   @include tablets {
     min-height: 885px;
@@ -10,9 +23,10 @@
     min-height: 750px;
   }
 }
-.l-title-intro {
+.l-title-intro-main {
   padding-top: 50px;
-  font-size: 34px;
+  padding-left: 2%;
+  font-size: 34px !important;
   color: white;
   strong {
     color: $red;
@@ -22,12 +36,29 @@
   }
 }
 
+.l-title-intro {
+  padding: 0 5%;
+
+  @include phones {
+    box-sizing: border-box;
+    padding: 0 5%;
+  }
+}
+
 .l-title-white {
   color: white;
 }
 
 .l-title-about-margin {
   padding-top: 50px;
+  @include tablets {
+    padding: 0;
+  }
+}
+
+.l-paragraph-intro {
+  box-sizing: border-box;
+  padding: 0 4%;
 }
 
 .l-paragraph-white {
@@ -55,7 +86,10 @@
 .l-section-about-engine {
   background-color: $black;
   @include col-center;
-  height: 650px;
+
+  @include tablets {
+    max-height: none;
+  }
 }
 
 .l-paragraph-engine {
@@ -143,10 +177,11 @@
   background-color: $coral;
 
   @include tablets {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    max-height: 549px;
   }
   @include phones {
-    flex-direction: column;
+    max-height: 500px;
   }
 }
 
@@ -156,15 +191,10 @@
   padding-left: 11.69%;
 
   @include tablets {
-    max-width: 100%;
+    max-width: 50%;
     height: 100%;
     padding-left: 0;
     object-fit: contain;
-  }
-  @include phones {
-    max-width: 100%;
-    height: 100%;
-    padding-left: 0;
   }
 }
 
@@ -181,7 +211,7 @@
 
 .l-paragraph-toothbrush-padding {
   padding-left: 49px;
-  padding-right: 16%;
+  padding-right: 4%;
 
   @include tablets {
     padding: 0 3%;
@@ -205,17 +235,14 @@
   position: relative;
 }
 
-.l-title-protect {
-  margin-top: 20px;
-}
-
 .l-img-protect {
   width: 100%;
 }
 
 .l-paragraph-protect {
   text-align: center;
-  width: 83%;
+  box-sizing: border-box;
+  padding: 0 4%;
 }
 
 .l-section-mobile-app {
@@ -227,7 +254,7 @@
 
   @include tablets {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -239,12 +266,11 @@
   @include tablets {
     height: 100%;
     width: auto;
-    transform: translate(0, 40px);
   }
 }
 
 .l-paragraph-mobile {
-  width: 75%;
+  padding-right: 4%;
   @include tablets {
     width: 100%;
     padding: 0 4%;
@@ -273,12 +299,13 @@
   @include tablets {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 }
 
 .l-half-water-padding {
   box-sizing: border-box;
-  padding-left: 8.4%;
+  padding-left: 2%;
 }
 
 .l-paragraph-water-protection {
@@ -298,8 +325,7 @@
 
   @include tablets {
     position: static;
-    width: auto;
-    height: 100%;
+    width: 100%;
   }
 }
 
@@ -309,13 +335,14 @@
   background: #e7e7e7;
 
   @include tablets {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    max-height: none;
   }
 }
 
 .l-paragraph-battery {
-  width: 75%;
+  padding-right: 4%;
   @include tablets {
     width: 100%;
     padding: 0 4%;
@@ -325,10 +352,13 @@
 
 .l-img-battery {
   width: 100%;
-  @include tablets{
+  @include tablets {
     width: auto;
     max-height: 100%;
-    transform: translateY(40px);
+  }
+  @include phones {
+    width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -358,9 +388,12 @@
 .mobile-app-adp {
   @include tablets {
     width: 100%;
-    height: 50%;
+    height: 64%;
     display: flex;
     justify-content: center;
+  }
+  @include phones {
+    height: 56%;
   }
 }
 
@@ -373,7 +406,7 @@
   }
   @include phones {
     width: 100%;
-    height: 50%;
+    height: 60%;
   }
 }
 
@@ -383,6 +416,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50%;
+    height: 65%;
   }
 }
+
+.paragraph-adp {
+  @include tablets {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
